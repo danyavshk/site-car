@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style/style_login.css">
+  <title>BuyCar - Вход и регистрация</title>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="/Images/logo.jpg" alt="BuyCar Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="../index.html">Главная</a></li>
+      <li><a href="car.html">Автомобили</a></li>
+      <li><a href="reviews.html">Отзывы</a></li>
+      <li><a href="login.html">Вход и регистрация</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="loginSection">
+    <h2>Вход</h2>
+    <form class="card login-card">
+      <label for="loginPhone">Номер телефона:</label>
+      <input type="tel" id="loginPhone" name="loginPhone" required>
+
+      <label for="loginPassword">Пароль:</label>
+      <input type="password" id="loginPassword" name="loginPassword" required>
+
+      <button type="submit">Войти</button>
+      <p onclick="showRegistrationForm()">Зарегистрироваться</p>
+      <p class="terms-text">При регистрации вы принимаете условия использования сайта и соглашаетесь на обработку персональных данных согласно <a href="#">политике конфиденциальности</a>.</p>
+    </form>
+  </section>
+
+  <section id="registrationSection" style="display: none;">
+    <h2>Регистрация</h2>
+    <form class="card registration-card">
+      <label for="regLastName">Фамилия:</label>
+      <input type="text" id="regLastName" name="regLastName" required>
+
+      <label for="regFirstName">Имя:</label>
+      <input type="text" id="regFirstName" name="regFirstName" required>
+
+      <label for="regPatronymic">Отчество:</label>
+      <input type="text" id="regPatronymic" name="regPatronymic" required>
+
+      <label for="regDOB">Дата рождения:</label>
+      <input type="date" id="regDOB" name="regDOB" required>
+
+      <label for="regEmail">Email:</label>
+      <input type="email" id="regEmail" name="regEmail" required>
+
+      <label for="regPhone">Номер телефона:</label>
+      <input type="tel" id="regPhone" name="regPhone" required>
+
+      <label for="regGender">Пол:</label>
+      <select id="regGender" name="regGender" required>
+        <option value="male">Мужской</option>
+        <option value="female">Женский</option>
+      </select>
+
+      <label for="regPassword">Пароль:</label>
+      <input type="password" id="regPassword" name="regPassword" required>
+
+      <label for="regConfirmPassword">Подтверждение пароля:</label>
+      <input type="password" id="regConfirmPassword" name="regConfirmPassword" required>
+
+      <!-- Добавьте любые другие поля, которые вам нужны -->
+
+      <button type="submit">Зарегистрироваться</button>
+      <p onclick="showLoginForm()">Войти</p>
+      <p class="terms-text">При регистрации вы принимаете условия использования сайта и соглашаетесь на обработку персональных данных согласно <a href="#">политике конфиденциальности</a>.</p>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2023 Вишняков Данил</p>
+</footer>
+
+<script src="/script/script.js"></script>
+</body>
+</html>

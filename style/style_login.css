@@ -1,0 +1,225 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between; /* Align items on the header space-between */
+    align-items: center; /* Center items vertically */
+}
+
+/* Логотип */
+.logo img {
+    max-width: 75px;
+    height: auto;
+    display: block;
+    border-radius: 50px;
+    transition: transform 0.3s ease; /* Анимация для логотипа */
+}
+
+.logo:hover img {
+    transform: rotate(360deg); /* При наведении - вращение логотипа */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ecf0f1;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background-color: #ecf0f1;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 400px;
+    transition: background-color 0.3s ease;
+}
+
+.card label {
+    display: block;
+    margin-bottom: 8px;
+    color: #3498db;
+}
+
+.card input,
+.card select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.card button {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+    font-size: 1.2em;
+}
+
+.card button.login-btn {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.card button.register-btn {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+}
+
+.card p.error {
+    color: #e74c3c;
+    margin: 10px 0;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.card p.terms-text {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.card p.terms-text a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card p.terms-text a:hover {
+    color: #2980b9;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section p {
+    cursor: pointer;
+    color: #3498db;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+footer {
+    background-color: #3498db;
+    color: #fff;
+    padding: 31px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        order: -1; /* Move the logo to the top in the column layout */
+    }
+
+    nav ul {
+        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap; /* Allow items to wrap onto a new line */
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Add spacing between navigation items */
+        text-align: center; /* Center the text in navigation items */
+        width: 100%; /* Make each navigation item take up the full width */
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
